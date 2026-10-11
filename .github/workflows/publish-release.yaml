@@ -45,7 +45,7 @@ jobs:
           - { target: x86_64-pc-windows-msvc,     runner: windows-latest, asset: windows-amd64, cross: false, ext: .exe }
           - { target: aarch64-pc-windows-msvc,    runner: windows-11-arm, asset: windows-arm64, cross: false, ext: .exe }
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           # Build exactly what is being released, not a branch tip that
           # may have moved since.
@@ -110,7 +110,7 @@ jobs:
       GITHUB_TOKEN: ${{ github.token }}
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           ref: ${{ inputs.tag }}
 
